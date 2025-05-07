@@ -22,7 +22,7 @@ class Program
         "PublicDomain"
     };
 
-    static readonly string FailedChangesExcelPath = @"C:\Repo\FailedChanges.xlsx";
+    static readonly string unusedClassesExcelPath = @"C:\Repo\FailedChanges.xlsx";
     static readonly string LogFilePath = @"C:\Repo\UnusedVariableLog.txt";
 
     static async Task Main(string[] args)
@@ -316,8 +316,8 @@ class Program
                 worksheet.Cells[i + 2, 3].Value = failedChanges[i].lineNumber;
             }
 
-            File.WriteAllBytes(FailedChangesExcelPath, package.GetAsByteArray());
-            Console.WriteLine($"[INFO] Saved failed variables to Excel: {FailedChangesExcelPath}");
+            File.WriteAllBytes(unusedClassesExcelPath, package.GetAsByteArray());
+            Console.WriteLine($"[INFO] Saved failed variables to Excel: {unusedClassesExcelPath}");
         }
         catch (Exception ex)
         {
