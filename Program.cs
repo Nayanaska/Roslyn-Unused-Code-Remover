@@ -17,13 +17,13 @@ class Program
 {
     static readonly List<string> IgnoredFolders = new List<string>
     {
-        "Tests",
-        "SampleSite",
-        "PublicDomain"
+        "folder1",
+        "folder2",
+        "folder3"
     };
 
-    static readonly string unusedClassesExcelPath = @"C:\Repo\FailedChanges.xlsx";
-    static readonly string LogFilePath = @"C:\Repo\UnusedVariableLog.txt";
+    static readonly string unusedClassesExcelPath = @"path\to\save\unusedclassesexcelfile.xlsx";
+    static readonly string LogFilePath = @"path/of/log/file.txt";
 
     static async Task Main(string[] args)
     {
